@@ -5,7 +5,6 @@ const getPassengers = async (query) => {
   const page = Number(query.page);
   const { name } = query;
   if (isNaN(page) || page <= 0) return { status: 400, response: { message: 'Invalid page value' } };
-  console.log(name);
 
   const offset = (page - 1) * 25;
   try {
